@@ -1,0 +1,59 @@
+	<?php 
+	//echo '<pre>'.print_r($posts).'</pre>';
+		$CI =& get_instance();
+		$id = $CI->session->userdata('poster_id');
+		$test = $CI->loggedin();
+		$poster = $CI->model_poster->getPoster($id);
+	?>
+<hr class="bd-white"></hr>
+<div class="container">
+	<div class="jumbotron text-center bg-mauve">
+	    <h1 class="fg-white">Chirper</h1>
+	    <p class="lead fg-white">Sharing your music experience with the world</p>
+	</div>
+	<div class="row">
+
+	<!-- Left pane of the content page -->
+		<div class="col-lg-3">
+			<div style="width:100%; border: 1px solid black;">
+				<h4>Mobile First</h4>
+				<p>Responsive by default, and a clean "flat" design.</p>
+
+				<h4>Powerful Grid</h4>
+				<p>3 responsive grid sizes to control the grid layout on tiny, small and large displays.</p>
+	    	</div>
+	    </div>
+	    
+	    <!-- Center of the content page -->
+	    <div class="col-lg-7" >
+		    <div class="" style="width:100%; border: 1px solid black;">
+				<h4>New Elements</h4>
+				<p>New panels, list groups, glyphicons and justified navigation.</p>
+
+				<h4>Less Bloat</h4>
+				<p>The optimized CSS is in a single file. Glyphicons are now separate.</p>
+		    </div>
+
+<!-- 		    <div style="width:100%; border: 1px solid black;">
+				<h4>New Elements</h4>
+				<p>New panels, list groups, glyphicons and justified navigation.</p>
+
+				<h4>Less Bloat</h4>
+				<p>The optimized CSS is in a single file. Glyphicons are now separate.</p>
+		    </div> -->
+	    </div>
+
+	    <!-- Right pane of the content page -->
+	    <div class="hidden-xs hidden-sm hidden-md col-lg-2">
+			<div style="width:100%; border: 1px solid black;">
+				<h4>Mobile First</h4>
+				<p>Responsive by default, and a clean "flat" design.</p>
+
+				<h4>Powerful Grid</h4>
+				<p>3 responsive grid sizes to control the grid layout on tiny, small and large displays.</p>
+	    	</div>
+	    </div>
+
+	</div>
+</div>
+			

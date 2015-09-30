@@ -1,0 +1,106 @@
+	body {
+		background: #DCD5D5;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat; 
+		background-attachment: fixed;
+	}
+
+	@font-face {
+	  font-family: 'Museo-500';
+	  src: url('http://www.fontsaddict.com/fontface/museo-500.otf');
+	}
+
+	.chirper {
+		font-family: 'Sacramento', cursive;
+	}
+
+	.links, #vision {
+		font-family: 'Museo-500' Tahoma;
+	}
+
+	/*#vision {
+		font-family: 'Museo-500' Tahoma;
+	}*/
+
+	#links {
+		text-align:center; 
+		font-family: 'Museo-500' Tahoma;
+	}
+
+	.user-profile-pane {
+		width:100%; 
+		margin:0 auto; 
+		padding: 10px; 
+	}
+
+	.add-comment, .add-post {
+		width:100%; 
+		margin:5px auto; 
+		padding: 5px;
+	}
+
+	#user-img {
+		margin-left:10px; 
+		margin-top: 10px;
+	}
+
+	#img {
+		height: 120px; 
+		width: 120px;
+	}
+
+	#post {
+		width:100%; 
+		margin:5px auto; 
+		border: 1px solid purple; 
+		border-radius:6px; 
+		padding: 5px;
+	}
+
+	.username {
+		font-size:1.5em;
+	}
+
+	#posttime {
+		font-size:0.8em;
+	}
+
+	.songname {
+		font-size:1.3em;
+		color: #090c91;
+	}
+	.artist {
+		font-size:1.3em;
+		color: white;
+	}
+
+	.comment-pane {
+		width:100%; 
+		margin:0 auto; 
+		padding: 10px; 
+	}
+
+	.reg-form {
+		width:100%; 
+		margin:0 auto; 
+		border: 1px solid purple; 
+		padding: 10px; 
+		border-radius: 6px;
+	}
+
+	.posts-pane {
+		width:100%; 
+		margin:0 auto; 
+		border: 1px solid white; 
+		padding: 10px; 
+	}
+
+	h2 {
+		text-align: center;
+	}
+
+	.join {
+		float: right; 
+		font-size: 1.5em;
+	}

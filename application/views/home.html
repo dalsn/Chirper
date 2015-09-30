@@ -1,0 +1,94 @@
+<div class="grid fluid">
+		<div class="row bg-mauve" style="padding: 10px;">
+			<div class="span3 hidden-xs hidden-sm">
+					<div class="input-control text" style="margin-top: 20px;">
+					    <input type="text" />
+					    <button class="btn-search"></button>
+				    </div>
+			</div>
+			<div class="span6">
+				<?php 
+					if ($test) { 
+						$img = $poster['img_file'];
+				?>
+						<div class="row">				
+							<!-- <div class="hidden-xs hidden-sm hidden-md col-lg-1"></div> -->
+							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-11" style="padding: 7px;">
+								<div class="hidden-xs hidden-sm col-md-2 col-lg-3">
+									<a href ='<?php echo site_url("profile/view/{$post['posterID']}"); ?>'>
+										<img class="cycle" src = "<?php echo site_url('imgs/posters/'.$img); ?>"/>
+									</a>
+								</div>
+								<div class="col-xs-12 col-sm-12 col-md-10 col-lg-8">
+								<form method="post" name="newpost">
+									<div class="input-control text size4">
+								    	<input type="text" placeholder="Song..."/>
+								    </div>
+								    <div class="input-control text size4">
+								    	<input type="text" placeholder="Artist..."/>
+								    </div>
+									<div class="input-control textarea">
+								    	<textarea></textarea>
+								    </div>
+								    <button type="submit" name="submit" value="addpost">Post</button>
+								</form>							
+								</div>
+							</div>
+						</div>
+				<?php	
+					} 
+				?>
+				
+				<?php
+					// print_r($posts[0]->getPoster());
+					foreach ($posts as $post) {
+						$img = $post['img_file'];
+						$username = $post['username'];
+						$postcomment = $post['comment'];
+						$t = $post['timestamp'];
+						$posttime = date("H:i A", $t). ' - '.date("d F, Y", $t);
+						$songname = $post['songName'];
+						$artist = $post['artist'];
+						//print_r($post);
+				?>
+						<div class="row" style="background: rgba(1,1,1,0.1);">				
+							<!-- <div class="hidden-xs hidden-sm hidden-md col-lg-1"></div> -->
+							<div class="bd-black" style="padding: 7px;">
+								<div class="hidden-xs hidden-sm col-lg-3">
+									<a href ='<?php echo site_url("profile/view/{$post['posterID']}"); ?>'>
+										<img  class="cycle" src = "<?php echo site_url('imgs/posters/'.$img); ?>" style="max-width:100px; min-width: 99px;" />
+									</a>
+								</div>
+								<div class="col-xs-12 col-sm-12 col-md-12 col-lg-9">
+									<div>
+										<a href ='<?php echo site_url("profile/view/{$post['posterID']}"); ?>'>
+											<kbd class="text-capitalize"><?php echo $username;?></kbd>
+										</a><br/>
+										<span><?php echo $posttime; ?></span>
+									</div>
+									<div>
+										<a href ='<?php echo site_url("home/song/{$post['songID']}"); ?>'><kbd class="bg-cyan">#<span class="text-capitalize"><?php echo $songname; ?></span></kbd></a>
+										<a href ='<?php echo site_url("home/artist/{$post['artist']}"); ?>'><kbd class="bg-lightRed">@<span class="text-capitalize"><?php echo $artist; ?></span></kbd></a>
+									</div>
+									<div>
+										<blockquote><?php echo $postcomment; ?></blockquote>
+									</div>
+									<div>
+										<ul class="list-inline " >
+										<?php if($test) { ?>
+											<li><span><a href='<?php echo site_url("comment/add/{$post['postID']}"); ?>'>Add comment</a></span></li>
+										<?php } ?>
+											<li><span><a href='<?php echo site_url("comment/view/{$post['postID']}"); ?>'>Comments</a></span></li>
+										</ul>
+									</div>								
+								</div>
+							</div>
+						</div>
+
+				<?php 
+					}
+				?>
+			</div>
+			<div class="span3 hidden-xs hidden-sm hidden-md"></div>
+		</div>
+	</div>
